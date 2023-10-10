@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { FilterCountriesComponent } from './filter-countries.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('FilterCountriesComponent', () => {
   let component: FilterCountriesComponent;
@@ -10,7 +11,7 @@ describe('FilterCountriesComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FilterCountriesComponent ],
-      imports: [IonicModule.forRoot()]
+      imports: [IonicModule.forRoot(), HttpClientModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(FilterCountriesComponent);
