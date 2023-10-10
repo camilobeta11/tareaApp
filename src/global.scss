@@ -24,3 +24,12 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+:root{
+  ion-toast.toast {
+    --background: #eb445a;
+    --border-radius: 10px;
+    --color: white;
+}
+
+}
