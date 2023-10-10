@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -13,10 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'task-list',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./pages/task-list/task-list.module').then( m => m.TaskListPageModule)
   },
   {
     path: 'task-detail',
+    canActivate: [AuthGuard],
     loadChildren: () => import('./pages/task-detail/task-detail.module').then( m => m.TaskDetailPageModule)
   },
 ];
