@@ -1,0 +1,13 @@
+<ion-item>
+  <ion-input placeholder="Escribe el país" [(ngModel)]="countryFilter" (ionInput)="filterCountries()"></ion-input>
+</ion-item>
+
+<ion-list *ngIf="filteredCountries.length > 0 && countryFilter.length > 0">
+  <ion-item *ngFor="let country of filteredCountries">
+    {{ country.name.common }}
+  </ion-item>
+</ion-list>
+
+<ion-text color="danger" *ngIf="filteredCountries.length === 0 && countryFilter.length > 0">
+  No se encontraron resultados.
+</ion-text>
