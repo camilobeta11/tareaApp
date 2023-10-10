@@ -14,9 +14,9 @@ Para ejecutar esta aplicación, necesitas tener instalado Node.js, Ionic CLI y C
 
 La aplicación utiliza una autenticación simulada. Puedes iniciar sesión con el siguiente usuario:
 
-Usuario: usertest
-Contraseña: 123456
-País de origen: Brazil
+- Usuario: ```bash usertest ```
+- Contraseña: ```bash 123456 ```
+- País de origen: ```bash Brazil ```
 
 ## Instalación
 
@@ -58,4 +58,4 @@ npx cap open android
 
 7. Apk
 
-![ Ver apk tareaApp ](https://drive.google.com/file/d/1Z4JaBQPpWlmQSdYQV56xGpjhpQMiHj4E/view?usp=sharing)
+- [ Ver apk tareaApp ](https://drive.google.com/file/d/1Z4JaBQPpWlmQSdYQV56xGpjhpQMiHj4E/view?usp=sharing)
