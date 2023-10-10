@@ -16,9 +16,9 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class LoginPage implements OnInit {
 
+  unsubscribe$: Subject<void> = new Subject<void>();
   loginForm!: FormGroup;
   countries: ICountry[] = [];
-  unsubscribe$: Subject<void> = new Subject<void>();
   invalidForm = false;
 
   constructor(

@@ -5,12 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { TaskListPageRoutingModule } from './task-list-routing.module';
-
 import { TaskListPage } from './task-list.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    ComponentsModule,
     FormsModule,
     IonicModule,
     TaskListPageRoutingModule

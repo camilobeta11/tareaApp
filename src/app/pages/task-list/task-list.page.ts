@@ -12,7 +12,9 @@ import { TaskService } from 'src/app/services/task.service';
   styleUrls: ['task-list.page.scss'],
 })
 export class TaskListPage {
+
   tasks: ITask[] = [];
+  segmentValue = 'taskList';
 
   constructor(
     private alertCtrl: AlertController,
@@ -35,8 +37,7 @@ export class TaskListPage {
 
   logout() {
     this.authService.logout();
-    this.navCtrl.navigateRoot('/login')
-
+    this.navCtrl.navigateRoot('/login');
   }
 
   async alert(type: string, taskId?: number) {
