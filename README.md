@@ -14,9 +14,9 @@ Para ejecutar esta aplicación, necesitas tener instalado Node.js, Ionic CLI y C
 
 La aplicación utiliza una autenticación simulada. Puedes iniciar sesión con el siguiente usuario:
 
-- Usuario: ```bash usertest ```
-- Contraseña: ```bash 123456 ```
-- País de origen: ```bash Brazil ```
+- Usuario: ```usertest```
+- Contraseña: ```123456```
+- País de origen: ```Brazil```
 
 ## Instalación
 
