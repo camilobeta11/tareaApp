@@ -5,7 +5,7 @@ describe('TaskListPage', () => {
   let component: TaskListPage;
   let fixture: ComponentFixture<TaskListPage>;
 
-  beforeEach(async(() => {
+  beforeEach((() => {
     fixture = TestBed.createComponent(TaskListPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
