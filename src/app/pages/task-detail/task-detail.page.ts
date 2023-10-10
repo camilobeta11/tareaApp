@@ -25,10 +25,15 @@ export class TaskDetailPage implements OnInit {
     this.route.paramMap.pipe(
       takeUntil(this.unsubscribe$))
       .subscribe((params: any) => {
-        if (params) {
-          const taskId = +params.get('id');
-          this.selectedTask = this.taskService.getTaskById(taskId);
-        }
+        const taskId = +params.get('id');
+        this.selectedTask = this.taskService.getTaskById(taskId);
       });
+  }
+
+  ngOnDestroy(): void {
+    if (this.unsubscribe$) {
+      this.unsubscribe$.next();
+      this.unsubscribe$.complete();
+    }
   }
 }
