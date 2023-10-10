@@ -1,15 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Lista de Tareas</ion-title>
     <ion-buttons slot="end">
       <ion-icon (click)="alert('logout')" color="danger" name="log-out-outline" size="large"></ion-icon>
     </ion-buttons>
+    <ion-segment color="success" [value]="segmentValue">
+      <ion-segment-button value="taskList" (click)="segmentValue = 'taskList'">
+        <ion-label>Lista de tareas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="searchCountry" (click)="segmentValue = 'searchCountry'">
+        <ion-label>Buscar país</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-card>
+    <ion-card *ngIf="segmentValue === 'taskList'">
       <ion-item *ngFor="let task of tasks">
         <ion-label (click)="goToTaskDetail(task.id)">
           {{ task.name }}
@@ -17,5 +24,8 @@
         <ion-button slot="end" (click)="alert('deleteElement', task.id)" color="danger">Eliminar</ion-button>
       </ion-item>
     </ion-card>
+
+    <app-filter-countries *ngIf="segmentValue === 'searchCountry'"></app-filter-countries>
+
   </ion-list>
 </ion-content>
