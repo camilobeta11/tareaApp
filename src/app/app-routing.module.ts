@@ -14,12 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'task-list',
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     loadChildren: () => import('./pages/task-list/task-list.module').then( m => m.TaskListPageModule)
   },
   {
-    path: 'task-detail',
-    canActivate: [AuthGuard],
+    path: 'task-detail/:id',
+    // canActivate: [AuthGuard],
     loadChildren: () => import('./pages/task-detail/task-detail.module').then( m => m.TaskDetailPageModule)
   },
 ];

@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Subject, takeUntil } from 'rxjs';
+
+import { ITask } from 'src/app/interfaces/interface';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-task-detail',
@@ -7,9 +13,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskDetailPage implements OnInit {
 
-  constructor() { }
+  selectedTask: ITask | null = null;
+  unsubscribe$: Subject<void> = new Subject<void>();
+
+  constructor(
+    private route: ActivatedRoute,
+    private taskService: TaskService
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.pipe(
+      takeUntil(this.unsubscribe$))
+      .subscribe((params: any) => {
+        if (params) {
+          const taskId = +params.get('id');
+          this.selectedTask = this.taskService.getTaskById(taskId);
+        }
+      });
   }
-
 }

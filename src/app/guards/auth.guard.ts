@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
 import { CanActivate } from '@angular/router';
+
+import { NavController } from '@ionic/angular';
+
 import { Observable, map } from 'rxjs';
+
 import { AuthService } from '../services/auth.service';
-import { NavController, ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'

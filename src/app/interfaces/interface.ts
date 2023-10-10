@@ -12,3 +12,8 @@ export interface ICountry {
 export interface ICommon {
   common: string;
 }
+
+export interface ITask {
+  id: number;
+  name: string;
+}
