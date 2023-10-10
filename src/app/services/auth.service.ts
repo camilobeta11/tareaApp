@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core'
 ;
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { ILoginForm } from 'src/interface/interface';
+import { ILoginForm } from 'src/app/interfaces/interface';
 
 @Injectable({
   providedIn: 'root'

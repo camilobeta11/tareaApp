@@ -3,9 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { NavController, ToastController } from '@ionic/angular';
 
-import { ICountry } from 'src/interface/interface';
-import { AuthService } from 'src/services/auth.service';
-import { CountriesService } from 'src/services/countries.service';
+import { ICountry } from 'src/app/interfaces/interface';
+import { AuthService } from 'src/app/services/auth.service';
+import { CountriesService } from 'src/app/services/countries.service';
 
 import { Subject, takeUntil } from 'rxjs';
 
