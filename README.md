@@ -23,7 +23,7 @@ La aplicación utiliza una autenticación simulada. Puedes iniciar sesión con e
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/tu-repositorio.git
+git clone https://github.com/camilobeta11/tareaApp.git
 ```
 
 2. Instala las dependencias:
