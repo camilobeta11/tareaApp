@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Lista de Tareas</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon (click)="alert('logout')" color="danger" name="log-out-outline" size="large"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-card>
+      <ion-item *ngFor="let task of tasks">
+        <ion-label (click)="goToTaskDetail(task.id)">
+          {{ task.name }}
+        </ion-label>
+        <ion-button slot="end" (click)="alert('deleteElement', task.id)" color="danger">Eliminar</ion-button>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>

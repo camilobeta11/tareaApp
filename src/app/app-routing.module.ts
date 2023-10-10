@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -9,15 +10,17 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'task-list',
-    loadChildren: () => import('./task-list/task-list.module').then( m => m.TaskListPageModule)
+    // canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/task-list/task-list.module').then( m => m.TaskListPageModule)
   },
   {
-    path: 'task-detail',
-    loadChildren: () => import('./task-detail/task-detail.module').then( m => m.TaskDetailPageModule)
+    path: 'task-detail/:id',
+    // canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/task-detail/task-detail.module').then( m => m.TaskDetailPageModule)
   },
 ];
 
