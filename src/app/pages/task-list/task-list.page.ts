@@ -42,7 +42,7 @@ export class TaskListPage {
 
   async alert(type: string, taskId?: number) {
     const alert = await this.alertCtrl.create({
-      header: '¿Estas seguro que deseas continuar?',
+      header: 'Confirma que quieres continuar',
       buttons: [
         {
           text: 'Cancelar',

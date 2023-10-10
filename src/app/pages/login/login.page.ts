@@ -79,7 +79,7 @@ export class LoginPage implements OnInit {
 
   async toast() {
     const toast = await this.toastCtrl.create({
-      header: 'Usuario o contraseña incorrectos',
+      header: 'Usuario, contraseña o país incorrectos',
       mode: 'ios',
       position: 'bottom',
       cssClass: 'toast',
